@@ -12,7 +12,10 @@ app = FastAPI()
 # Configurar CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:4321"],
+    allow_origins=[
+        "http://localhost:4321",
+        "https://astro-helpers.vercel.app"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
